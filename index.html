@@ -137,6 +137,14 @@
                             Metadata Dictionary
                         </h5>
                         <div id="metadata-description">
+                            <div id="multimedia-content">
+                                <hr class="mt-5 mb-4 sub-divider">
+                                <h6>
+                                    Multimedia
+                                </h6>
+                                <table id="multimedia-metadata-tb"  data-url="js/mul_d_descp.json"></table>
+                            </div>
+
                             <div id="IQ-metadata-content">
                                 <h6>
                                     Image Quality Metadata
@@ -147,9 +155,16 @@
                             <div id="Image-metadata-content">
                                 <hr class="mt-5 mb-4 sub-divider">
                                 <h6>
-                                    Image Metadata
+                                    Extended Image Metadata
                                 </h6>
                                 <table id="Image-metadata-tb"  data-url="js/i_md_descp.json"></table>
+                            </div>
+                            <div id="batchcontent">
+                                <hr class="mt-5 mb-4 sub-divider">
+                                <h6>
+                                    Batch
+                                </h6>
+                                <table id="batch-tb"  data-url="js/b_md_descp.json"></table>
                             </div>
                         </div>
                     </div>
@@ -265,7 +280,7 @@
         </div>
     </section>
 <script type="application/javascript">
-    $('#IQ-metadata-tb,#Image-metadata-tb').bootstrapTable({
+    $('#IQ-metadata-tb,#Image-metadata-tb,#batch-tb,#multimedia-metadata-tb').bootstrapTable({
         //url: 'js/ig_md_descp.json',
         theadClasses: "thead-green",
         columns: [{
