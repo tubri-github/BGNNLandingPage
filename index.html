@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biology Guided Neural Network – Tulane Team</title>
+    <title>FISH-AIR</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]  }});</script>
@@ -28,7 +29,7 @@
         .masthead {
             height: 10vh;
             min-height: 300px;
-            background-image: url('img/header-bg.jfif');
+            background-image: url('img/header-bg-blue.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -40,15 +41,15 @@
             padding-right: 5rem;
         }
         .nav-item .nav-link{
-            color: #509d64;
+            color: #509d97;
         }
         /*.nav-item .nav-link:hover{*/
         /*    border: 1px solid #509d64*/
         /*}*/
         .nav-item .nav-link.active {
             color: white;
-            background-color: #509d64;
-            border-color: #dee2e6 #dee2e6 #509d64;
+            background-color: #50669d;
+            border-color: #dee2e6 #dee2e6 #394c77;
         }
 
         .nav .nav-item li.active a:after {
@@ -62,7 +63,7 @@
         }
 
         h5{
-            color: #509d64;
+            color: #4381a9;
         }
         .fw-light{
             color:#fff;
@@ -75,13 +76,15 @@
         }
         img.avatar{
             border-radius: 50%;
+            width:116px;
+            height:116px;
         }
         hr.sub-divider{
             border-top: 0px;
         }
         .table .thead-green th {
             color: #fff;
-            background-color: #70A4A7;
+            background-color: #37a1a6;
             border-color: #e8e8e8;
         }
         .table td {
@@ -90,195 +93,274 @@
     </style>
 </head>
 <body>
-    <header class="masthead">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-center">
-                    <h1 class="fw-light">Biology Guided Neural Network – Tulane Team</h1>
-                    <p class="lead">A Landing Page</p>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a class="logo" href="#"><img class="img-logo" src="img/logo/transparentfishAIRlogo.png">FISH-AIR</a>
+
+                <div class="navbar-links">
+                    <a href="#">HOME</a>
+                    <a href="#">DATASET</a>
+                    <a href="#">WORKFLOW</a>
+                    <a href="#">VOCABULARY</a>
+                    <a href="#">ACCESS</a>
+                    <a href="#">TEAM</a>
                 </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="container">
+                <h1>FISH-AIR</h1>
+                <p>A FISH IMAGE DATASET WITH BUILT-IN IMAGE QUALITY MANAGEMENT SYSTEM</p>
+                <p class="content">A new science discipline has emerged within the last decade at the intersection of informatics, computer science and biology – Imageomics. Like most other -omics fields, Imageomics also uses most recent technologies to analyze biological data but from the images. One of the most applied data analysis methods for image datasets is Machine Learning. In 2019, we started working on an NSF funded project, known as Biology Guided Neural Networks with the purpose of extracting information about biology by using neural networks and biological guidance. We have built a dataset composed of digitized fish specimens either directly from collections or from data repositories. With another NSF-Institute project, Imageomics, as continuum of the Biology Guided Neural Networks, we have added new functionalities to the dataset management system including image quality metadata, extended image metadata and batch metadata. Additional flexible database infrastructure with RDF framework allowed system to host different taxonomic groups with a variety of new metadata features. By the combination of these features, along with FAIR principles and reproducibility, we provide Artificial Intelligence Readiness (AIR) feature to the dataset.
+                    Currently, the dataset serves as the largest and the most detailed AI-Ready fish image dataset with integrated Image Quality Management System.
+                </p>
+                <button>START</button>
             </div>
         </div>
     </header>
 
-    <section class="py-5">
+    <section class="services">
         <div class="container">
-<!--            <h2 class="fw-light">Page Content</h2>-->
-            <p>Tulane’s role in the project has been providing expertise on fish taxonomy, morphology and nomenclature to other project investigators, gathering fish specimen images from image repositories for use in the project, either by searching for multimedia files in iDigBio’s portal and downloading them or having the institutions send us hard drives containing the images. Once the images were gathered, we associated any metadata that accompanied the images, including collection event metadata from FishNet2, updated and cleaned the taxonomic names associated with the images using <a href="https://www.calacademy.org/scientists/projects/eschmeyers-catalog-of-fishes">Eschmeyer’s Catalog of Fishes</a> and the <a href="https://www.marinespecies.org/">World Registry of Marine Organisms (WoRMS)</a> , filtered the images to confirm that we were working with the right kinds of images for our studies (lateral views of external surfaces of whole fish specimens), then employed humans in a manual task of visualizing the images and capturing <b>image-quality (IQ) metadata</b> from them.</p>
-
-
-            <div id="content-navigation">
-                <ul class="nav nav-tabs justify-content-center" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="datasets-tab" data-toggle="tab" href="#tab-datasets" role="tab" aria-controls="tab-datasets" aria-selected="true">The Datasets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="workflow-tab" data-toggle="tab" href="#tab-workflow" role="tab" aria-controls="tab-workflow" aria-selected="false">Data Workflow</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="people-tab" data-toggle="tab" href="#tab-people" role="tab" aria-controls="tab-people" aria-selected="false">Team</a>
-                    </li>
-                </ul>
-
-                <div class="tab-content" id="tab-container">
-                    <div class="tab-pane fade show active" id="tab-datasets" role="tabpanel" aria-labelledby="datasets-tab">
-                        <div id="datasets-intro">
-                            <h5>
-                                Image Repositories
-                            </h5>
-                            <p>We have started with iDigBio repository which is available online. The images were varying so much amongst the collections and there were so many different types of images and we had to provide a clean dataset as soon as possible and we have received images from GLIN project, so we preferred to start working with them.</p>
-                            <p><b><a href="https://www.idigbio.org/">iDigBio</a> – Integrated Digitized Biocollections</b> iDigBio repository is an online national image repository that serves data and multimedia files belong to millions (>40m) of biological specimens located in museums, herbaria and other collections. The multimedia files are mostly images however they are not all in the same type. CT scans, drawings, X-Ray images, skeletons, fossils, specimen labels, and many other different types of images can be found most of them without any metadata captured specifying type of the image. Also, taxonomic names are not always reliable since the institutions providing the names are not very careful about curation of the data. Another problem with the iDigBio repository is, some of the image files are located somewhere else and are not always available for downloading.</p>
-                            <p><b><a href="https://greatlakesinvasives.org/portal/index.php">GLIN</a> - Great Lakes Invasives Network</b> Bi-national thematic collections network of >20 institutions from eight states and Canada digitized >1.7 million biological specimens representing 2,550 species of exotic fish, clams, snails, mussels, algae, plants, and their look-alikes documented to occur in the North America's Great Lakes Basin. We have contacted six museums and retrieved the data from five of them on hard drives. Data quality, amount of images, way of digitizing, and the species diversity was different amongst the museums, however mostly acceptable.</p>
-                        </div>
-
-                        <hr class="mt-5">
-
-                        <h5>
-                            Metadata Dictionary
-                        </h5>
-                        <div id="metadata-description">
-                            <div id="multimedia-content">
-                                <hr class="mt-5 mb-4 sub-divider">
-                                <h6>
-                                    Multimedia
-                                </h6>
-                                <table id="multimedia-metadata-tb"  data-url="js/mul_d_descp.json"></table>
-                            </div>
-
-                            <div id="IQ-metadata-content">
-                                <h6>
-                                    Image Quality Metadata
-                                </h6>
-                                <table id="IQ-metadata-tb"  data-url="js/ig_md_descp.json"></table>
-                            </div>
-
-                            <div id="Image-metadata-content">
-                                <hr class="mt-5 mb-4 sub-divider">
-                                <h6>
-                                    Extended Image Metadata
-                                </h6>
-                                <table id="Image-metadata-tb"  data-url="js/i_md_descp.json"></table>
-                            </div>
-                            <div id="batchcontent">
-                                <hr class="mt-5 mb-4 sub-divider">
-                                <h6>
-                                    Batch
-                                </h6>
-                                <table id="batch-tb"  data-url="js/b_md_descp.json"></table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-workflow" role="tabpanel" aria-labelledby="workflow-tab">
-                        <p>
-                            The challenges we came across with the data especially with the images in iDigBio dataset pushed us to create a workflow for generating AI ready dataset. This AI ready dataset includes not just clean images with uniform background and no color issues etc, but also providing a list of images in a desired format that includes corrected scientific names, file names and URL information with a unique id number.
-                        </p>
-                        <p>
-                            The workflow consists of three blocks;
-                            <ul>
-                                <li>
-                                    Gathering/Harvesting
-                                </li>
-                                <li>
-                                    Cleaning/Filtering
-                                </li>
-                                <li>
-                                    Publishing
-                                </li>
-                            </ul>
-                        </p>
-                        <img class="common-image" src="img/workflow.jpg">
-
-                        <!--  workflow - gathering/harvesting -->
-                        <hr class="mt-5">
-
-                        <h5>
-                            Gathering/Harvesting
-                        </h5>
-                        <p>
-<!--                            We gathered images of GLIN dataset from several museums by contacting each of these institutions and made them mail us the data on hard drives. The data was varying amongst the ...-->
-                            <gray>IN PROGRESS...</gray>
-                        </p>
-
-                        <!--  workflow - gathering/harvesting -->
-                        <hr class="mt-5">
-
-                        <h5>
-                            Cleaning/Filtering
-                        </h5>
-                        <p>
-                            <gray>IN PROGRESS...</gray>
-                        </p>
-
-                        <!--  workflow - Publishing -->
-                        <hr class="mt-5">
-
-                        <h5>
-                            Publishing
-                        </h5>
-                        <p>
-                            <gray>IN PROGRESS...</gray>
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="tab-people" role="tabpanel" aria-labelledby="people-tab">
-                        <div class="container">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col">
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <img class="avatar" src="img/bart.jpg">
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <div><b>Henry L. (Hank) Bart, Jr.</b></div>
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <small>hbartjr@tulane.edu</small>
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <p>Principal Investigator</p>
-                                    </div>
-
-                                </div>
-
-                                <div class="col">
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <img class="avatar" src="img/yasin.jpg">
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <div><b>Yasin Bakış</b></div>
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <small>ybakis@tulane.edu</small>
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <p>Co-Principal Investigator</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <img class="avatar" src="img/xiaojun.jpg">
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <div><b>Xiaojun Wang</b></div>
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <small>xwang48@tulane.edu</small>
-                                    </div>
-                                    <div class="row d-flex justify-content-center text-center">
-                                        <p>Software Programmer</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    </div>
-
+            <h2>Sub panels</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <i class="fa fa-users"></i>
+                    <h3>PANEL 1</h3>
+                    <p>Description...</p>
                 </div>
-            </div>
+                <div class="service">
+                    <i class="fa fa-graduation-cap"></i>
+                    <h3>PANEL 1</h3>
+                    <p>Description...</p>
+                </div>
+                <div class="service">
+                    <i class="fa fa-heart"></i>
+                    <h3>PANEL 2</h3>
+                    <p>Description...</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#"><img src="img/supports/TU.png"></a>
+                <a href="#"><img src="img/supports/TUBRI.png"></a>
+                <a href="#"><img src="img/supports/NSF.png"></a>
+                <a href="#"><img src="img/supports/IMAGEOMICS.png"></a>
+            </div>
+            <p>&copy; 2023 FISH-AIR   This research is supported by: National Science Foundation Harnessing the Data Revolution Institute Grant #2118240 (Imageomics) Tulane University subaward from the Ohio State University and by NSF OAC Office of Advanced Cyberinfrastructure (OAC) #1940322 (BGNN).
+            </p>
+        </div>
+    </footer>
+<!--    <header class="masthead">-->
+<!--        <div class="container h-100">-->
+<!--            <div class="row h-100 align-items-center">-->
+<!--                <div class="col-12 text-center">-->
+<!--                    <h1 class="fw-light">Fish-AIR</h1>-->
+<!--                    <p class="lead">A FISH IMAGE DATASET WITH BUILT-IN IMAGE QUALITY MANAGEMENT SYSTEM-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+
+<!--    <section class="py-5">-->
+<!--        <div class="container">-->
+<!--&lt;!&ndash;            <h2 class="fw-light">Page Content</h2>&ndash;&gt;-->
+<!--            <p>A new science discipline has emerged within the last decade at the intersection of informatics, computer science and biology – Imageomics. Like most other -omics fields, Imageomics also uses most recent technologies to analyze biological data but from the images. One of the most applied data analysis methods for image datasets is Machine Learning. In 2019, we started working on an NSF funded project, known as Biology Guided Neural Networks with the purpose of extracting information about biology by using neural networks and biological guidance. We have built a dataset composed of digitized fish specimens either directly from collections or from data repositories. With another NSF-Institute project, Imageomics, as continuum of the Biology Guided Neural Networks, we have added new functionalities to the dataset management system including image quality metadata, extended image metadata and batch metadata. Additional flexible database infrastructure with RDF framework allowed system to host different taxonomic groups with a variety of new metadata features. By the combination of these features, along with FAIR principles and reproducibility, we provide Artificial Intelligence Readiness (AIR) feature to the dataset.-->
+<!--                Currently, the dataset serves as the largest and the most detailed AI-Ready fish image dataset with integrated Image Quality Management System.-->
+<!--            </p>-->
+
+
+<!--            <div id="content-navigation">-->
+<!--                <ul class="nav nav-tabs justify-content-center" role="tablist">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" id="datasets-tab" data-toggle="tab" href="#tab-datasets" role="tab" aria-controls="tab-datasets" aria-selected="true">The Datasets</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" id="workflow-tab" data-toggle="tab" href="#tab-workflow" role="tab" aria-controls="tab-workflow" aria-selected="false">Data Workflow</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" id="people-tab" data-toggle="tab" href="#tab-people" role="tab" aria-controls="tab-people" aria-selected="false">Team</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+
+<!--                <div class="tab-content" id="tab-container">-->
+<!--                    <div class="tab-pane fade show active" id="tab-datasets" role="tabpanel" aria-labelledby="datasets-tab">-->
+<!--                        <div id="datasets-intro">-->
+<!--                            <h5>-->
+<!--                                Image Repositories-->
+<!--                            </h5>-->
+<!--                            <p>We have started with iDigBio repository which is available online. The images were varying so much amongst the collections and there were so many different types of images and we had to provide a clean dataset as soon as possible and we have received images from GLIN project, so we preferred to start working with them.</p>-->
+<!--                            <p><b><a href="https://www.idigbio.org/">iDigBio</a> – Integrated Digitized Biocollections</b> iDigBio repository is an online national image repository that serves data and multimedia files belong to millions (>40m) of biological specimens located in museums, herbaria and other collections. The multimedia files are mostly images however they are not all in the same type. CT scans, drawings, X-Ray images, skeletons, fossils, specimen labels, and many other different types of images can be found most of them without any metadata captured specifying type of the image. Also, taxonomic names are not always reliable since the institutions providing the names are not very careful about curation of the data. Another problem with the iDigBio repository is, some of the image files are located somewhere else and are not always available for downloading.</p>-->
+<!--                            <p><b><a href="https://greatlakesinvasives.org/portal/index.php">GLIN</a> - Great Lakes Invasives Network</b> Bi-national thematic collections network of >20 institutions from eight states and Canada digitized >1.7 million biological specimens representing 2,550 species of exotic fish, clams, snails, mussels, algae, plants, and their look-alikes documented to occur in the North America's Great Lakes Basin. We have contacted six museums and retrieved the data from five of them on hard drives. Data quality, amount of images, way of digitizing, and the species diversity was different amongst the museums, however mostly acceptable.</p>-->
+<!--                        </div>-->
+
+<!--                        <hr class="mt-5">-->
+
+<!--                        <h5>-->
+<!--                            Metadata Dictionary-->
+<!--                        </h5>-->
+<!--                        <div id="metadata-description">-->
+<!--                            <div id="multimedia-content">-->
+<!--                                <hr class="mt-5 mb-4 sub-divider">-->
+<!--                                <h6>-->
+<!--                                    Multimedia-->
+<!--                                </h6>-->
+<!--                                <table id="multimedia-metadata-tb"  data-url="js/mul_d_descp.json"></table>-->
+<!--                            </div>-->
+
+<!--                            <div id="IQ-metadata-content">-->
+<!--                                <h6>-->
+<!--                                    Image Quality Metadata-->
+<!--                                </h6>-->
+<!--                                <table id="IQ-metadata-tb"  data-url="js/ig_md_descp.json"></table>-->
+<!--                            </div>-->
+
+<!--                            <div id="Image-metadata-content">-->
+<!--                                <hr class="mt-5 mb-4 sub-divider">-->
+<!--                                <h6>-->
+<!--                                    Extended Image Metadata-->
+<!--                                </h6>-->
+<!--                                <table id="Image-metadata-tb"  data-url="js/i_md_descp.json"></table>-->
+<!--                            </div>-->
+<!--                            <div id="batchcontent">-->
+<!--                                <hr class="mt-5 mb-4 sub-divider">-->
+<!--                                <h6>-->
+<!--                                    Batch-->
+<!--                                </h6>-->
+<!--                                <table id="batch-tb"  data-url="js/b_md_descp.json"></table>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="tab-pane fade" id="tab-workflow" role="tabpanel" aria-labelledby="workflow-tab">-->
+<!--                        <p>-->
+<!--                            The challenges we came across with the data especially with the images in iDigBio dataset pushed us to create a workflow for generating AI ready dataset. This AI ready dataset includes not just clean images with uniform background and no color issues etc, but also providing a list of images in a desired format that includes corrected scientific names, file names and URL information with a unique id number.-->
+<!--                        </p>-->
+<!--                        <p>-->
+<!--                            The workflow consists of three blocks;-->
+<!--                            <ul>-->
+<!--                                <li>-->
+<!--                                    Gathering/Harvesting-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    Cleaning/Filtering-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    Publishing-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </p>-->
+<!--                        <img class="common-image" src="img/workflow.jpg">-->
+
+<!--                        &lt;!&ndash;  workflow - gathering/harvesting &ndash;&gt;-->
+<!--                        <hr class="mt-5">-->
+
+<!--                        <h5>-->
+<!--                            Gathering/Harvesting-->
+<!--                        </h5>-->
+<!--                        <p>-->
+<!--&lt;!&ndash;                            We gathered images of GLIN dataset from several museums by contacting each of these institutions and made them mail us the data on hard drives. The data was varying amongst the ...&ndash;&gt;-->
+<!--                            <gray>IN PROGRESS...</gray>-->
+<!--                        </p>-->
+
+<!--                        &lt;!&ndash;  workflow - gathering/harvesting &ndash;&gt;-->
+<!--                        <hr class="mt-5">-->
+
+<!--                        <h5>-->
+<!--                            Cleaning/Filtering-->
+<!--                        </h5>-->
+<!--                        <p>-->
+<!--                            <gray>IN PROGRESS...</gray>-->
+<!--                        </p>-->
+
+<!--                        &lt;!&ndash;  workflow - Publishing &ndash;&gt;-->
+<!--                        <hr class="mt-5">-->
+
+<!--                        <h5>-->
+<!--                            Publishing-->
+<!--                        </h5>-->
+<!--                        <p>-->
+<!--                            <gray>IN PROGRESS...</gray>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <div class="tab-pane fade" id="tab-people" role="tabpanel" aria-labelledby="people-tab">-->
+<!--                        <div class="container">-->
+<!--                            <div class="row d-flex justify-content-center">-->
+<!--                                <div class="col">-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <img class="avatar" src="img/bart.jpg">-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <div><b>Henry L. (Hank) Bart, Jr.</b></div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <small>hbartjr@tulane.edu</small>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <p>Principal Investigator</p>-->
+<!--                                    </div>-->
+
+<!--                                </div>-->
+
+<!--                                <div class="col">-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <img class="avatar" src="img/yasin.jpg">-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <div><b>Yasin Bakış</b></div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <small>ybakis@tulane.edu</small>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <p>Co-Principal Investigator</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col">-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <img class="avatar" src="img/bahadir.png">-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <div><b>Bahadir Altintas</b></div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <small>baltintas@tulane.edu</small>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <p>Senior Software Developer & Research</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="col">-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <img class="avatar" src="img/xiaojun.jpg">-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <div><b>Xiaojun Wang</b></div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <small>xwang48@tulane.edu</small>-->
+<!--                                    </div>-->
+<!--                                    <div class="row d-flex justify-content-center text-center">-->
+<!--                                        <p>Software Programmer</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 <script type="application/javascript">
     $('#IQ-metadata-tb,#Image-metadata-tb,#batch-tb,#multimedia-metadata-tb').bootstrapTable({
         //url: 'js/ig_md_descp.json',
