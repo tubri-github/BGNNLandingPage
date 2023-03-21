@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FISH-AIR</title>
+    <title>Fish-AIR</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
@@ -99,45 +99,45 @@
                 <a class="logo" href="#"><img class="img-logo" src="img/logo/transparentfishAIRlogo.png">FISH-AIR</a>
 
                 <div class="navbar-links">
-                    <a href="#">HOME</a>
-                    <a href="#">DATASET</a>
-                    <a href="#">WORKFLOW</a>
-                    <a href="#">VOCABULARY</a>
-                    <a href="#">ACCESS</a>
-                    <a href="#">TEAM</a>
+                    <a class="active" href="">HOME</a>
+                    <a href="data.html">DATASET</a>
+                    <a href="workflow.html">WORKFLOW</a>
+                    <a href="vocabulary.html">VOCABULARY</a>
+                    <a href="access.html">ACCESS</a>
+                    <a href="team.html">TEAM</a>
                 </div>
             </div>
         </nav>
         <div class="hero">
             <div class="container">
-                <h1>FISH-AIR</h1>
+                <h1>Fish-AIR</h1>
                 <p>A FISH IMAGE DATASET WITH BUILT-IN IMAGE QUALITY MANAGEMENT SYSTEM</p>
                 <p class="content">A new science discipline has emerged within the last decade at the intersection of informatics, computer science and biology – Imageomics. Like most other -omics fields, Imageomics also uses most recent technologies to analyze biological data but from the images. One of the most applied data analysis methods for image datasets is Machine Learning. In 2019, we started working on an NSF funded project, known as Biology Guided Neural Networks with the purpose of extracting information about biology by using neural networks and biological guidance. We have built a dataset composed of digitized fish specimens either directly from collections or from data repositories. With another NSF-Institute project, Imageomics, as continuum of the Biology Guided Neural Networks, we have added new functionalities to the dataset management system including image quality metadata, extended image metadata and batch metadata. Additional flexible database infrastructure with RDF framework allowed system to host different taxonomic groups with a variety of new metadata features. By the combination of these features, along with FAIR principles and reproducibility, we provide Artificial Intelligence Readiness (AIR) feature to the dataset.
                     Currently, the dataset serves as the largest and the most detailed AI-Ready fish image dataset with integrated Image Quality Management System.
                 </p>
-                <button>START</button>
+                <a href="access.html">START</a>
             </div>
         </div>
     </header>
 
     <section class="services">
         <div class="container">
-            <h2>Sub panels</h2>
+<!--            <h2>Sub panels</h2>-->
             <div class="services-grid">
-                <div class="service">
+                <div onclick="location.href='data.html';" style="cursor: pointer;" class="service">
                     <i class="fa fa-users"></i>
-                    <h3>PANEL 1</h3>
+                    <h3>AI-Ready</h3>
                     <p>Description...</p>
                 </div>
-                <div class="service">
+                <div onclick="location.href='vocabulary.html';" style="cursor: pointer;" class="service">
                     <i class="fa fa-graduation-cap"></i>
-                    <h3>PANEL 1</h3>
+                    <h3>Quality Metadata</h3>
                     <p>Description...</p>
                 </div>
-                <div class="service">
+                <div onclick="location.href='access.html';" style="cursor: pointer;" class="service" >
                     <i class="fa fa-heart"></i>
-                    <h3>PANEL 2</h3>
-                    <p>Description...</p>
+                    <h3>API</h3>
+                    <p>Fish-AIR access point</p>
                 </div>
             </div>
         </div>
@@ -146,10 +146,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="#"><img src="img/supports/TU.png"></a>
-                <a href="#"><img src="img/supports/TUBRI.png"></a>
-                <a href="#"><img src="img/supports/NSF.png"></a>
-                <a href="#"><img src="img/supports/IMAGEOMICS.png"></a>
+                <a href="https://tulane.edu/"><img src="img/supports/TU.png"></a>
+                <a href="http://tubri.org"><img src="img/supports/TUBRI.png"></a>
+                <a href="https://www.nsf.gov/"><img src="img/supports/NSF.png"></a>
+                <a href="https://imageomics.osu.edu/"><img src="img/supports/IMAGEOMICS.png"></a>
             </div>
             <p>&copy; 2023 FISH-AIR   This research is supported by: National Science Foundation Harnessing the Data Revolution Institute Grant #2118240 (Imageomics) Tulane University subaward from the Ohio State University and by NSF OAC Office of Advanced Cyberinfrastructure (OAC) #1940322 (BGNN).
             </p>
@@ -361,38 +361,6 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </section>-->
-<script type="application/javascript">
-    $('#IQ-metadata-tb,#Image-metadata-tb,#batch-tb,#multimedia-metadata-tb').bootstrapTable({
-        //url: 'js/ig_md_descp.json',
-        theadClasses: "thead-green",
-        columns: [{
-            field: 'Identifier',
-            title: 'Identifier'
-        }, {
-                field: 'Type',
-                title: 'Type'
-            },{
-            field: 'Label',
-            title: 'Label'
-        }, {
-            field: 'Definition',
-            title: 'Definition'
-        }, {
-                field: 'Status',
-                title: 'Status',
-                formatter: displaycolor
-            }]
-    })
 
-    function displaycolor(value,row,index) {
-        var a = "";
-        if(value == "Active") {
-            a = '<span style="color:#5bae67">'+value+'</span>';
-        }else{
-            a = '<span style="color:#f44336">'+value+'</span>';
-        }
-        return a;
-    }
-</script>
 </body>
 </html>
